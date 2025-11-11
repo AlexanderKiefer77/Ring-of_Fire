@@ -19,3 +19,18 @@
         width: 120px;
     }
 }
+
+.top-card { // animation für die oberste Karte auf dem Startbild Kartenstapel
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.1) translateY(-20px); // vergrößert sich etwas und bewegt sich etwas nach oben
+    }
+}
+
+.pick-card { // animation, das die oberste Karte weiter vergrößert wird, wen man auf die Karte drauf clickt.
+    transition: all 125ms ease-in-out;
+    transform: scale(1.5) !important; // !important notwendig, da sonst der hover bevorzugt wird
+}
+

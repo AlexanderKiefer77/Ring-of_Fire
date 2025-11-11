@@ -9,5 +9,12 @@ import { NgForOf, NgStyle } from "@angular/common";
   styleUrl: './game.component.scss'
 })
 export class GameComponent {
+  pickCardAnimation = false;
 
+  constructor() {}
+
+  takeCard() {
+    this.pickCardAnimation = true;
+  }
+  
 }
