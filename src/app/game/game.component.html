@@ -2,13 +2,24 @@
 
     <div class="card-stack">
 
-        <img *ngFor="let c of [0, 1, 2, 3]; let i = index;" [ngStyle]="{'right.px': i * 5}"
-            src="./../../assets/img/cards/card_cover.png" alt="">
+        <!-- ########### Zwischenschritt ############# -->
+        <!--    <img *ngFor="let c of [0, 1, 2, 3]; let i = index;" [ngStyle]="{'right.px': i * 5}"
+                    src="./../../assets/img/cards/card_cover.png" alt=""> -->
         <!-- für das Startbild nach drücken des Start-Buttons zu erzeugen. 
             Ist wie eine for Schleife, damit wird das img 4x erzeugt (nur in Angular), werden quasi leicht versetzt übereinander gelegt. -->
 
-        <img (click)="takeCard()" [class.pick-card]="pickCardAnimation" class="top-card" style="right: 25px" src="./../../assets/img/cards/card_cover.png" alt="">
+        <!-- <img (click)="takeCard()" [class.pick-card]="pickCardAnimation" class="top-card" style="right: 25px"
+            src="./../../assets/img/cards/card_cover.png" alt=""> -->
         <!-- damit die oberste Karte auf dem Stapel anders animiert wird, ist eine 5. Karte, die erzeugt wird.-->
+        <!-- ########### Ende Zwischenschritt ############# -->
+
+        <img *ngFor="let c of [0, 1, 2, 3]; let i = index;" [ngStyle]="{'right.px': i * 5}"
+            src="./../../assets/img/cards/card_cover.png" alt="">
+        <img (click)="takeCard()" class="top-card" style="right: 25px"
+            src="./../../assets/img/cards/card_cover.png" alt="">
+        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px"
+            src="./../../assets/img/cards/spade_1.png" alt="">
+
     </div>
 
 </div>

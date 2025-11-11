@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgForOf, NgStyle } from "@angular/common";
+import { NgForOf, NgStyle, NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [NgForOf, NgStyle],
+  imports: [NgForOf, NgStyle, NgIf],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -16,5 +16,5 @@ export class GameComponent {
   takeCard() {
     this.pickCardAnimation = true;
   }
-  
+
 }
