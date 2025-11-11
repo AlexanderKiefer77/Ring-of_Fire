@@ -6,8 +6,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
         height: 100vh;
+    }
+}
+
+.start-label-box {
+    position: absolute;
+    left: 0;
+    bottom: 120px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 24vw;
+        height: auto;
+
+        &:hover {
+            filter: brightness(1.4);
+            cursor: pointer;
+        }
     }
 }
 
