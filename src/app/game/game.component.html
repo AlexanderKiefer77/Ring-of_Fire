@@ -18,7 +18,8 @@
         <img (click)="takeCard()" class="top-card" style="right: 25px"
             src="./../../assets/img/cards/card_cover.png" alt="">
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px"
-            src="./../../assets/img/cards/spade_1.png" alt="">
+            src="./../../assets/img/cards/{{ currentCard }}.png" alt=""> 
+            <!-- anhand der Variablen "currentCard" wird hier die Karte angezeigt, die als letztes aus dem stack genommen wurde -->
 
     </div>
 

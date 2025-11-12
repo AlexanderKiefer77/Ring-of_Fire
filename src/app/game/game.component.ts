@@ -12,7 +12,8 @@ import { Game } from '../../models/game';
 })
 export class GameComponent {
   pickCardAnimation = false;
-  game: Game; // ????
+  currentCard?: string = '';
+  game: Game;
 
   constructor() {
     this.game = new Game();
@@ -24,11 +25,13 @@ export class GameComponent {
 
   newGame() {
     this.game = new Game();
-    console.log(this.game);
-    
+    // console.log(this.game); // anzeigen des gemischten stack
   }
 
-  takeCard() {
+  takeCard() { 
+    this.currentCard = this.game.stack.pop(); // nimmt die letzte Karte aus dem stack
+    //console.log(this.currentCard); // anzeigen der letzten Karte, die aus dem stack genommen wurde
+    
     this.pickCardAnimation = true;
   }
 

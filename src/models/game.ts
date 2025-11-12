@@ -17,7 +17,9 @@ export class Game { // erstellt ein Object für die Spieldaten
     }
 }
 
-function shuffle(array: string[]): string[] {
+
+// sortiert die Karten im stack zufällig quasi Karten gemischt
+function shuffle(array: string[]): string[] { 
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (0!== currentIndex) {
