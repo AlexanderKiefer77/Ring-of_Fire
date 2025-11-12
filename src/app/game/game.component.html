@@ -1,5 +1,5 @@
 <!-- Damit werden soviele Spieler erzeugt, wie im entsprechenden Array angelegt sind. Diese werden dann entsprechend versetzt nach unten angezeigt -->
-<app-player *ngFor="let player of game.players; let i = index;" [ngStyle]="{'top.px': 100 + (i * 140)}"
+<app-player *ngFor="let player of game.players; let i = index;" [ngStyle]="{'top.px': 100 + (i * 140)}" [name]="player"
     class="player-position"></app-player>
 
 <div class="field">
