@@ -1,8 +1,8 @@
 
 export class Game { // erstellt ein Object für die Spieldaten
     public players: string[] = [];
-    public stack: string[] = [];
-    public playedCards: string[] = [];
+    public stack: string[] = []; // für stack
+    public playedCards: string[] = []; // für gespielte Karten
     public currentPlayer: number = 0;
 
     constructor() {
