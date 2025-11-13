@@ -69,8 +69,9 @@ export class GameComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');     
+    dialogRef.afterClosed().subscribe((name: string) => { // übernimmt den Namen, der als Spieler eingegeben wurde
+      // console.log('The dialog was closed', name);     
+      this.game.players.push(name); // fügt den eingegebenen Namen ins Spiler Array ein und der Spieler wird erstellt
     });
   }
 
