@@ -68,3 +68,21 @@
     right: 0;
 }
 
+.btn-add { // button zum hinzufügen
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    border-radius: 50%;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background-color: crimson;
+    color: black;
+
+    &:hover {
+        background-color: maroon;
+        color: white;
+        cursor: pointer;
+    }
+}
+
