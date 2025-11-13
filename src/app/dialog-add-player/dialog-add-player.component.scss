@@ -1,0 +1,10 @@
+.btn-dialog {
+    gap: 32px !important;
+
+    button {
+
+    &:hover {
+        cursor: pointer;
+    }
+    }
+}
