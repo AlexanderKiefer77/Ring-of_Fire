@@ -9,6 +9,7 @@
 </div>
 <div mat-dialog-actions class="btn-dialog">
   <button matButton (click)="onNoClick()">No Thanks</button>
-  <button matButton [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
+  <button matButton [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
+  <!-- [disabled]="name.length == 0" sorgt dafür, das kein Spieler ohne Name angelegt werden kann -->
 </div>
 

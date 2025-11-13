@@ -4,10 +4,10 @@ import { Game } from '../../models/game';
 import { PlayerComponent } from '../player/player.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog,} from '@angular/material/dialog';
+import { MatDialog, } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { GameInfoComponent } from '../game-info/game-info.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 
 @Component({
@@ -76,7 +76,9 @@ export class GameComponent {
 
     dialogRef.afterClosed().subscribe((name: string) => { // übernimmt den Namen, der als Spieler eingegeben wurde
       // console.log('The dialog was closed', name);     
-      this.game.players.push(name); // fügt den eingegebenen Namen ins Spiler Array ein und der Spieler wird erstellt
+      if (name && name.length > 0) {
+        this.game.players.push(name); // fügt den eingegebenen Namen ins Spieler Array ein und der Spieler wird erstellt
+      }
     });
   }
 
