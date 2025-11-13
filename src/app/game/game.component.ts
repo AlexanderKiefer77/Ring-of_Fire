@@ -57,6 +57,9 @@ export class GameComponent {
       //console.log(this.currentCard); // anzeigen der letzten Karte, die aus dem stack genommen wurde
       this.pickCardAnimation = true; // die Variable wird auf true gesetzt
 
+      this.game.currentPlayer++; // Bei jedem Karten ziehen wird die Anzahl Spieler um eins hochgesetzt
+      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length; // verhindert, das der currentPlayer größer wird als die Anzahl der Spieler
+
       setTimeout(() => {
         if (this.currentCard !== undefined) {
           this.game.playedCards.push(this.currentCard);// packt die aktuell gezogene Karte ins array playedCards
